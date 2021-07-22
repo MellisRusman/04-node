@@ -17,7 +17,7 @@ const preguntas = [
 ];
 const inquirerMenu = async() =>{
     console.clear();
-    console.log("======================".red);
+    console.log("===============a=======".red);
     console.log("===Elija una opcion===".red);
     console.log("======================\n".red);
     const {opcion} = await inquirer.prompt(preguntas);
