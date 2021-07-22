@@ -19,7 +19,7 @@ const inquirerMenu = async() =>{
     console.clear();
     console.log("===============a=======".red);
     console.log("===Elija una opcqweion===".red);
-    console.log("=============a=========\n".red);
+    console.log("=============a======das===\n".red);
     const {opcion} = await inquirer.prompt(preguntas);
     return opcion;
 }
