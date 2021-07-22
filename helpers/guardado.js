@@ -9,7 +9,7 @@ const guardarDB = (data) =>{
 }
 
 const leerDB3 = () =>{
-    
+    console.log("asdas");
     if (!fs.existsSync(archivo)){
         return null;
     }
