@@ -8,7 +8,7 @@ const guardarDB = (data) =>{
 
 }
 
-const fsd = () =>{
+const leerDB = () =>{
     console.log("asdas");
     if (!fs.existsSync(archivo)){
         return null;

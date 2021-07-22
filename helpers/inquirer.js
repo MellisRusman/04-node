@@ -11,34 +11,7 @@ const preguntas = [
         name: 'opcion',
         message: '¿Que desea hacer?',
         choices: [
-            {
-                value: "1",
-                name: `${'1.'.red} Crear tarea`
-            },
-            {
-                value: "2",
-                name:`${'2.'.red} Mostrar tareas`
-            },
-            {
-                value: "3",
-                name:`${'3.'.red} Mostrar tareas pendientes`
-            },
-            {
-                value: "4",
-                name:`${'4.'.red} Mostrar tareas completadas`
-            },
-            {
-                value: "5",
-                name:`${'5.'.red} Completar tarea`
-            },
-            {
-                value: "6",
-                name:`${'6.'.red} Borrar tarea`
-            },
-            {
-                value: "0",
-                name:`${'0.'.red} Salir`
-            }
+           
         ]
     }
 ];
