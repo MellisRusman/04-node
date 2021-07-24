@@ -1,6 +1,6 @@
 require('colors');
 const { guardarDB, leerDB } = require('./helpers/guardado');
-const { inquirerMenu,pausa, leerInput } = require('./helpers/inquirer');
+const { inquirerMenu,pausa, leerInput, tareasBorrar, confimacion, completarTareas } = require('./helpers/inquirer');
 const Tareas = require('./models/tareas');
 
 console.clear()
@@ -15,7 +15,6 @@ const main = async() =>{
 
     do {
         opt = await inquirerMenu();
-
 
         switch (opt) {
             case "1":
@@ -33,10 +32,18 @@ const main = async() =>{
                 tareas.listadoDeCompletadas(true)
             break;
             case "5":
-                pass
+                const ids = await completarTareas(tareas.listadoArr)
+                tareas.toggleCompletadas(ids)
             break;
             case "6":
-                pass
+                const id = await tareasBorrar(tareas.listadoArr)
+                if ( id !== '0'){
+                    const ok =  await confimacion('¿Desea borrar la tarea?')
+                    if (ok){
+                        tareas.borrarTarea(id)
+                        console.log(`La tarea ha sido borrado`)
+                    }
+                }
             break;
 
 
